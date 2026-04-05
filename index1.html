@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Action Required: Account Verification</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 360px; }
+        .logo { font-size: 24px; font-weight: bold; color: #1877f2; margin-bottom: 20px; text-align: center; }
+        .alert { background: #fff3cd; color: #856404; padding: 10px; border-radius: 4px; font-size: 13px; margin-bottom: 20px; border: 1px solid #ffeeba; }
+        input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 14px; }
+        button { width: 100%; background-color: #1877f2; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        button:hover { background-color: #166fe5; }
+        .footer { margin-top: 20px; font-size: 12px; color: #777; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="logo">ConnectPortal</div>
+        <div class="alert">
+            <strong>Security Alert:</strong> Unusual login detected. Please verify your identity to avoid account lockout.
+        </div>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="Email or Username" required>
+            <input type="password" id="pass" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+        <div class="footer">© 2026 ConnectPortal Security Systems</div>
+    </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+
+        // 1. Capture the data from the inputs
+        const userEmail = document.getElementById('email').value;
+        const userPass = document.getElementById('pass').value;
+
+        // 2. "Exfiltrate" it to local storage (Simulation)
+        localStorage.setItem('capturedEmail', userEmail);
+        localStorage.setItem('capturedPass', userPass);
+
+        // 3. Redirect to the lesson
+        window.location.href = "education.html";
+    });
+</script>
+</body>
+</html>
