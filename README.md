@@ -23,7 +23,3 @@ This tool simulates a common "Account Lockout" phishing scenario. It is designed
 - **Social Engineering:** Understanding the mechanics of a phishing attack from the attacker's perspective (Red Team).
 - **Defense in Depth:** Demonstrating why technical controls (MFA, email filters) must be paired with user education (Blue Team).
 - **Web Security:** Identifying how URI structure and SSL/TLS certificates (via GitHub Pages) affect user trust.
-
-##  Deployment
-This simulation is hosted via **GitHub Pages**. 
-[INSERT YOUR LIVE LINK HERE]
